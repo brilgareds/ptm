@@ -1,0 +1,10 @@
+.addProductButtonContainer {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 1rem;
+}
+
+.tabletOptionsContainer {
+  display: flex;
+  column-gap: 0.7rem;
+}

@@ -1,0 +1,78 @@
+:root {
+  --primary-100: #008a8a;
+  --primary-200: #028282;
+  --primary-300: #3e7490;
+  --primary-400: #006d6d;
+  --primary-500: #455294;
+  --primary-600: #006498;
+  --primary-700: #00188a;
+
+  --secondary-100: #000000;
+
+  --neutral-100: #ffffff;
+  --neutral-200: #dbdbdb;
+  --neutral-300: #F5F5FB;
+  --neutral-400: #6d6d72;
+  --neutral-600: #717171;
+  --neutral-700: #5a5a5a;
+  --neutral-800: #00000003;
+  --neutral-900: #000000;
+
+  --alert-success: #128400;
+  --alert-warning: #DDAD00;
+  --alert-error: #ce2828;
+
+  --modal-shadow: #00000033;
+
+  --width-container: '80%';
+
+  --transparent: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+div .SnackbarItem-wrappedRoot > .SnackbarItem-variantSuccess {
+  background-color: var(--alert-success);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+div .SnackbarItem-wrappedRoot > .SnackbarItem-variantWarning {
+  background-color: var(--alert-warning);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+div .SnackbarItem-wrappedRoot > .SnackbarItem-variantError {
+  background-color: var(--alert-error);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.MuiDataGrid-columnHeaders {
+  background-color: var(--primary-100);
+  color: white;
+}
+
+.MuiDataGrid-selectedRowCount {
+  color: transparent;
+}
+
+.MuiDataGrid-root {
+  min-height: 15rem;
+}

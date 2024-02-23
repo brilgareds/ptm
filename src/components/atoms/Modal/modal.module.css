@@ -1,0 +1,40 @@
+.shadow {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--modal-shadow);
+  z-index: 20;
+}
+
+.modalContainer {
+  background: var(--neutral-100);
+  border-radius: 1.1rem;
+  margin: 2rem auto 0 auto;
+}
+
+.modal {
+  position: relative;
+  padding: 2rem;
+}
+
+.modalContainer-small {
+  width: 30%;
+}
+
+.modalContainer-normal {
+  width: 50%;
+}
+
+.exit {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--neutral-400);
+}
+
+.exit:hover {
+  cursor: pointer;
+}

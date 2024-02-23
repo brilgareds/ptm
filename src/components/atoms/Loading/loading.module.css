@@ -1,0 +1,24 @@
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(248, 248, 248, 0.5);
+}
+
+.fullscreen {
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.absolute {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

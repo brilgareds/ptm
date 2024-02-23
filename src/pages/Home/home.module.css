@@ -1,0 +1,44 @@
+
+.highlightedInfoSection {
+  margin-bottom: 4rem;
+}
+
+.productSection {
+  margin-bottom: 4rem;
+}
+
+.highlightedInfoSection,
+.productSection {
+  width: var(--width-container);
+}
+
+.highlightedInfoContainer,
+.productTabletContainer {
+  position: relative;
+  margin: 2rem auto 0 auto;
+  padding: 2rem;
+  width: 75%;
+  min-height: 14rem;
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.5rem 20px 1px #0000001a;
+}
+
+.productTablet__title {
+  color: var(--primary-100);
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+.footer {
+  background: white;
+  padding: 1.4rem 3.5rem;
+  box-shadow: 0.25rem 0.5rem 20px 1px #0000001a;
+}
+
+.footer__title {
+  color: var(--primary-100);
+}
+
+.footer__content {
+  color: var(--neutral-400);
+}

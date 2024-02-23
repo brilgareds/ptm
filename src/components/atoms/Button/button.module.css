@@ -1,0 +1,34 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(12rem, 100%);
+  gap: 0.5rem;
+  outline: 0;
+  border: 0.15rem solid var(--color);
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.9rem;
+  font-size: 1rem;
+  background: var(--color);
+  color: var(--neutral-100);
+  font-weight: bold;
+  transition: scale 0.2s;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:has(.button__iconContainer):not(:has(.button__textContainer)) {
+  padding: 0;
+  width: auto;
+}
+
+.button__iconContainer {
+  display: flex;
+  align-items: center;
+}
+
+.button__textContainer {
+  margin-top: 0.1rem;
+}

@@ -1,0 +1,29 @@
+.modalHeader {
+  margin-bottom: 3rem;
+}
+
+.modalHeader__title {
+  text-align: center;
+  color: var(--primary-700);
+  font-weight: 600;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cancelButton {
+  background: transparent;
+  color: var(--primary-600);
+  --color: currentColor;
+}
+
+.deleteButton {
+  background: transparent;
+  color: darkred;
+  border-color: currentColor;
+  --color: currentColor;
+}

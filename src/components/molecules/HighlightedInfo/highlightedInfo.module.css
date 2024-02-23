@@ -1,0 +1,46 @@
+.infoCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+
+.infoCard {
+  border-radius: 0.6rem;
+}
+
+.infoCard,
+.infoCatFacts {
+  border: 1px solid;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.infoCard__title {
+  margin-top: 0;
+  margin-bottom: 0; 
+  padding: 0.8rem 2rem;
+  background: var(--primary-100);
+  color: white; 
+  text-align: center;
+  box-sizing: border-box; 
+}
+
+.infoCard__body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.infoCard__quantity {
+  font-size: 1.2rem;
+  color: var(--neutral-400);
+}
+
+.infoCatFacts {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.infoCatFacts > .infoCard__body:not(:nth-last-of-type(1)) {
+  box-sizing: border-box;
+  border-bottom: 1px solid;
+}
