@@ -29,7 +29,8 @@ export default function HighlightedInfo(props: HighlightedInfoProps = {}) {
 
   useEffect(() => {
     const getCatFactLikeString = async () => {
-      const { data } = await catService.getFacts()
+      const response = await catService.getFacts()
+      const data = await response.json()
 
       return data.data[0]
     }
@@ -78,9 +79,9 @@ export default function HighlightedInfo(props: HighlightedInfoProps = {}) {
             <h3 className={highlightedInfoStyles.infoCard__title}>Sabías que...</h3>
 
             <div className={highlightedInfoStyles.infoCatFacts}>
-              {catFacts?.map((catFact) => (
-                <div className={highlightedInfoStyles.infoCard__body}>
-                  <span className={highlightedInfoStyles.infoCard__catFact    }>{catFact}</span>
+              {catFacts?.map((catFact, index) => (
+                <div className={highlightedInfoStyles.infoCard__body} key={index}>
+                  <span className={highlightedInfoStyles.infoCard__catFact}>{catFact}</span>
                 </div>
               ))}
             </div>

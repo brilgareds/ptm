@@ -6,3 +6,12 @@ export interface Product {
   stock: number
   total: number
 }
+
+export type ProductResponse = {
+  id: number,
+  nombre: string,
+  descripcion: string,
+  precio: number,
+  cantidad_en_stock: number,
+  total: number,
+}[]

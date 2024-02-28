@@ -23,23 +23,23 @@ export default function FormUpdateProduct(props: FormUpdateProductProps) {
         <input type="text" name="id" id="id" defaultValue={productToUpdate?.id} style={{ display: 'none' }}/>
 
         <div className={formUpdateProductStyles.inputGroup}>
-          <label htmlFor="name">Nombre</label>
-          <input type="text" name="name" id="name" defaultValue={productToUpdate?.name} />
+          <label htmlFor="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" defaultValue={productToUpdate?.name} />
         </div>
 
         <div className={formUpdateProductStyles.inputGroup}>
-          <label htmlFor="description">Descripción</label>
-          <input type="text" name="description" id="description" defaultValue={productToUpdate?.description} /> 
+          <label htmlFor="descripcion">Descripción</label>
+          <input type="text" name="descripcion" id="descripcion" defaultValue={productToUpdate?.description} /> 
         </div>
 
         <div className={formUpdateProductStyles.inputGroup}>
-          <label htmlFor="price">Precio</label>
-          <input type="text" name="price" id="price"  defaultValue={productToUpdate?.price} /> 
+          <label htmlFor="precio">Precio</label>
+          <input type="text" name="precio" id="precio" defaultValue={productToUpdate?.price} /> 
         </div>
 
         <div className={formUpdateProductStyles.inputGroup}>
-          <label htmlFor="stock">Stock</label>
-          <input type="text" name="stock" id="stock"  defaultValue={productToUpdate?.stock} /> 
+          <label htmlFor="cantidad_en_stock">Stock</label>
+          <input type="text" name="cantidad_en_stock" id="cantidad_en_stock"  defaultValue={productToUpdate?.stock} /> 
         </div>
       </div>
 

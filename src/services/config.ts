@@ -1,3 +1,7 @@
-import axios from 'axios';
+export const generalConfig: RequestInit = {
+  headers: {
+    'Content-Type': 'application/json'
+  },
+}
 
-export const api = axios
+export const api = fetch

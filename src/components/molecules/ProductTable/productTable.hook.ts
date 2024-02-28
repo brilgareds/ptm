@@ -42,12 +42,14 @@ export const useProductTable = () => {
   const createProduct = async (event: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
     event.preventDefault()
 
-    const data = new FormData(event.target as HTMLFormElement)
-    console.log('data: ', data)
+    const formDataObj: any = {};
+    const formData = new FormData(event.target as HTMLFormElement)
+    formData.forEach((value, key) => (formDataObj[key] = value));
 
     try {
-      await productService.createProduct(data)
+      await productService.createProduct(formDataObj)
       onSuccess('Producto creado correctamente!')
+      closeCreateModal()
     } catch (error) {
       console.error('updateProduct() ->', error)
       onError('Ocurrió un error al intentar crear el producto')
@@ -56,11 +58,14 @@ export const useProductTable = () => {
 
   const updateProduct = async (event: SyntheticEvent<HTMLFormElement, SubmitEvent>) => {
     event.preventDefault()
+    const formDataObj: any = {};
     const data = new FormData(event.target as HTMLFormElement)
+    data.forEach((value, key) => (formDataObj[key] = value));
 
     try {
-      await productService.updateProduct(data)
+      await productService.updateProduct(formDataObj)
       onSuccess('Producto actualizado correctamente!')
+      closeUpdateModal()
     } catch (error) {
       console.error('updateProduct() ->', error)
       onError('Ocurrió un error al intentar actualizar el producto')
@@ -76,6 +81,7 @@ export const useProductTable = () => {
     try {
       await productService.deleteProduct(id)
       onSuccess('Producto eliminado correctamente!')
+      closeDeleteModal()
     } catch (error) {
       console.error('deleteProduct() ->', error)
       onError('Ocurrió un error al intentar eliminar el producto')

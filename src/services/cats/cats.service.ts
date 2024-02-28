@@ -1,13 +1,9 @@
-import { api } from "../config"
-
-interface GetFactsResponse {
-  data: string[]
-}
+import { api, generalConfig } from "../config"
 
 export const catService = {
   getFacts: async () => {
     const url = `${process.env.REACT_APP_CAT_URL}?lang=esp`
 
-    return api.get<GetFactsResponse>(url)
+    return api(url, {...generalConfig})
   }
 }

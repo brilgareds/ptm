@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { productService } from '../../services/products/products.service';
-import { Product } from '../../interfaces/product';
+import { Product, ProductResponse } from '../../interfaces/product';
 import { useNotification } from '../../hooks/notifications';
 import ProductTable from '../../components/molecules/ProductTable';
 import homeStyles from './home.module.css'
@@ -16,8 +16,19 @@ export default function Home() {
   useEffect(() => {
     const getProducts = async () => {  
       try {
-        const { data } = await productService.getProducts()
-        setProducts(data.products)
+        const response = await productService.getProducts()
+        const data = await response.json() as ProductResponse
+
+        const newProducts = data.map((product) => ({
+          id: product.id,
+          name: product.nombre,
+          description: product.descripcion,
+          price: product.precio,
+          stock: product.cantidad_en_stock,
+          total: product.total
+        }))
+
+        setProducts(newProducts)
       } catch (error) {
         setProducts([])
         console.error('getProducts() ->', error)
@@ -27,8 +38,9 @@ export default function Home() {
 
     const getFacts = async () => {
       try {
-        const { data } = await uselessfactsService.getFacts()
-        setUselessfacts(data.text)  
+        const response = await uselessfactsService.getFacts()
+        const data = await response.json()
+        setUselessfacts(data.text)
       } catch (error) {
         setProducts([])
         console.error('getFacts() ->', error)

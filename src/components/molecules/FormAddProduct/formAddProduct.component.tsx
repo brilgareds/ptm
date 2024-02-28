@@ -18,23 +18,23 @@ export default function FormAddProduct(props: FormAddProductProps) {
 
       <div className={formAddProductStyles.formBody}>
         <div className={formAddProductStyles.inputGroup}>
-          <label htmlFor="name">Nombre</label>
-          <input type="text" name="name" id="name" />
+          <label htmlFor="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" />
         </div>
 
         <div className={formAddProductStyles.inputGroup}>
-          <label htmlFor="description">Descripción</label>
-          <input type="text" name="description" id="description" /> 
+          <label htmlFor="descripcion">Descripción</label>
+          <input type="text" name="descripcion" id="descripcion" /> 
         </div>
 
         <div className={formAddProductStyles.inputGroup}>
-          <label htmlFor="price">Precio</label>
-          <input type="text" name="price" id="price" /> 
+          <label htmlFor="precio">Precio</label>
+          <input type="text" name="precio" id="precio" /> 
         </div>
 
         <div className={formAddProductStyles.inputGroup}>
-          <label htmlFor="stock">Stock</label>
-          <input type="text" name="stock" id="stock" /> 
+          <label htmlFor="cantidad_en_stock">Stock</label>
+          <input type="text" name="cantidad_en_stock" id="cantidad_en_stock" /> 
         </div>
       </div>
 
